@@ -73,4 +73,16 @@ void MainWindow::on_horizontalSlider_valueChanged(int value)
 }
 
 
+void MainWindow::slot_close_and_open(int)
+{
+    this->show();
+}
 
+void MainWindow::on_open_new_widget_btn_clicked()
+{
+    Form* f = new Form;
+    f->show();
+
+    connect(f, SIGNAL(close_and_open(int)), this, SLOT(slot_close_and_open(int)));
+    this->hide();
+}
