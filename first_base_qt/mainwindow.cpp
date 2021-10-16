@@ -14,6 +14,13 @@ MainWindow::MainWindow(QWidget *parent)
     // method 2:
     // name slot method as : on_pushButton_clicked
 
+    // slider
+    ui->horizontalSlider->setMinimum(0);
+    ui->horizontalSlider->setMaximum(20);
+
+    // progressBar
+    ui->progressBar->setRange(0, 20);
+    ui->progressBar->setValue(0);
 }
 
 MainWindow::~MainWindow()
@@ -26,9 +33,29 @@ void MainWindow::on_pushButton_clicked(bool checked)
 {
     ui->pushButton->setText("hi, qzc");
     qDebug() << "hi, qzc " << checked;
+
+    ui->label->setText("label : qzc");
+    ui->checkBox->setChecked(true);
 }
 void MainWindow::clicked_method1(bool checked)
 {
     ui->pushButton->setText("hi, qzc method1");
     qDebug() << "hi, qzc method1 " << checked;
 }
+
+void MainWindow::on_checkBox_stateChanged(int arg1)
+{
+    //    bool is_check = ui->checkBox->isChecked();
+    qDebug() << "hi, qzc, checkBox  is " << arg1;
+}
+
+void MainWindow::on_horizontalSlider_valueChanged(int value)
+{
+    qDebug() << "hi, qzc, slider " << value;
+    ui->label_slider_value->setText(QString::number(value));
+
+    ui->progressBar->setValue(value);
+}
+
+
+

@@ -19,6 +19,10 @@ private slots:
     void on_pushButton_clicked(bool checked);
     void clicked_method1(bool checked);
 
+    void on_checkBox_stateChanged(int arg1);
+
+    void on_horizontalSlider_valueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
 };
