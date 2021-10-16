@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->treeWidget->setHeaderLabels(QStringList()<<"key"<<"value");
     QTreeWidgetItem* item1 = new QTreeWidgetItem(QStringList()<<"Global Options");
     ui->treeWidget->addTopLevelItem(item1);
+    item1->setIcon(0, QIcon("://images/options.png"));
 
     QTreeWidgetItem* item1_child = new QTreeWidgetItem(QStringList()<<"Fixed Frame");
     item1->addChild(item1_child);
