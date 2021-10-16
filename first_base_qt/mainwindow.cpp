@@ -21,6 +21,20 @@ MainWindow::MainWindow(QWidget *parent)
     // progressBar
     ui->progressBar->setRange(0, 20);
     ui->progressBar->setValue(0);
+
+    // treeWidget
+    ui->treeWidget->setHeaderLabels(QStringList()<<"key"<<"value");
+    QTreeWidgetItem* item1 = new QTreeWidgetItem(QStringList()<<"Global Options");
+    ui->treeWidget->addTopLevelItem(item1);
+
+    QTreeWidgetItem* item1_child = new QTreeWidgetItem(QStringList()<<"Fixed Frame");
+    item1->addChild(item1_child);
+
+    QComboBox* box1 = new QComboBox;
+    box1->setMaximumWidth(160);
+    box1->addItem("map");
+    box1->setEditable(true);
+    ui->treeWidget->setItemWidget(item1_child, 1, box1);
 }
 
 MainWindow::~MainWindow()

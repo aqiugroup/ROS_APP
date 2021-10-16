@@ -17,8 +17,8 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
       <width>731</width>
       <height>401</height>
      </rect>
@@ -133,6 +133,27 @@
      <attribute name="title">
       <string>Tab 2</string>
      </attribute>
+     <widget class="QTreeWidget" name="treeWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>721</width>
+        <height>361</height>
+       </rect>
+      </property>
+      <attribute name="headerMinimumSectionSize">
+       <number>160</number>
+      </attribute>
+      <attribute name="headerDefaultSectionSize">
+       <number>160</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string notr="true">1</string>
+       </property>
+      </column>
+     </widget>
     </widget>
    </widget>
   </widget>
