@@ -12,7 +12,10 @@
 ** Includes
 *****************************************************************************/
 
-#include <QtGui/QMainWindow>
+// qzc : modify for qt5
+//#include <QtGui/QMainWindow>
+#include <QtWidgets/QMainWindow>
+// qzc : modify for qt5
 #include "ui_main_window.h"
 #include "qnode.hpp"
 
